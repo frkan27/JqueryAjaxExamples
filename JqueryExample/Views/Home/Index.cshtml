@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<button id="btn1">kaydet</button>
+<button id="btn2">alll</button>
+<button id="btn3">Gİzle</button>
+<button id="btn4">göster</button>
+<button id="btn5">Toggle</button>
+<button id="btn6">css</button>
+<button id="btn7">css</button>
+<button id="btn8">dizler</button>
+<p>baya iyiy öğreniyorsun hee </p>
+<ul></ul>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+    $("#btn1").click(function () {
+        alert("ilk jquery")
+    })
+    $("#btn2").click(function () {
+        alert("iyi öğren")
+    })
+    $("p").on({
+        mouseover: function () {
+            $(this).css("color", "blue");
+        },
+        mouseleave: function () {
+            $(this).css("color", "red");
+        }
+    })
+    $("#btn3").click(function () {
+        $("p").hide();
+    })
+    $("#btn4").click(function () {
+        $("p").show();
+    })
+    $("#btn5").click(function () {
+        $("p").toggle(1000);
+    })
+    $("#btn6").css({ "background-color": "white", "color": "green" });
+
+    $("#btn6").click(function () {
+        $("p").append("eklemeyi appendle yapıyoruz");
+    })  
+    $("#btn7").click(function () {
+        alert($("button").length)
+    })
+
+    var takimlar = ["bjk", "ts", "fb", "gs"]
+    $("#btn8").click(function () {
+        $.each(takimlar, function (key,value) {
+            // console.log(value) key 0,1,2,3 value bjk,ts,fb,gs gösterir.
+            $("ul").append("<li>"+value+"</li>")
+        })
+    })
+
+
+
+
+
+</script>

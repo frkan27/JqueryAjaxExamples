@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Sayfa";
+}
+
+<h2>dosyadan veri okuma sayfası</h2>
+<div id="txt">
+    <button id="btn1">Veri AL</button>
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    //sayfa yüklendiğinde çalışıcak functionları yukler....
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("#txt").load("/Content/ankara.txt", function (response, status, x) {
+                if (status == "success")
+                    alert("başarılır" + x.status);
+                if (status == "error")
+                    alert("başarılı değil");
+            })
+        })
+    })
+
+
+
+
+
+</script>

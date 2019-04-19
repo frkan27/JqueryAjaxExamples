@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2 class="text-danger">Json result ile bilgi okuma</h2>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            $.getJSON("/Home/GetCustomer", null, function (data) {
+                $.each(data, function (i, eleman) {
+                    $("#ull").append("<li>" + eleman.CompanyName + "</li>");
+                })
+            })
+        })
+    })
+</script>
+
+<button id="btn">Getir</button>
+<ul id="ull"></ul>

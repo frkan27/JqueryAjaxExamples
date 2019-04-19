@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryExample", "JqueryExample\JqueryExample.csproj", "{4B12ED5D-2916-4641-8333-A06070E5D019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxjsonFormat", "AjaxjsonFormat\AjaxjsonFormat.csproj", "{C94CB82E-929D-483D-A02E-B089FC8C9A01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.JqueryExample", "1.JqueryExample", "{2C7663AA-4DCD-420A-8675-C394ADBE24BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.AjaxJsonFormat", "2.AjaxJsonFormat", "{7ECD0FE3-A273-4DEE-91FC-A82F9150FAB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.AjaxDynamicForm", "3.AjaxDynamicForm", "{FB804EAC-B1B0-4FCB-B668-4E7F3EE96CB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxTutorial", "AjaxTutorial\AjaxTutorial.csproj", "{A106DCD8-E82A-4408-B8FC-B988457B6210}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B12ED5D-2916-4641-8333-A06070E5D019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B12ED5D-2916-4641-8333-A06070E5D019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B12ED5D-2916-4641-8333-A06070E5D019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B12ED5D-2916-4641-8333-A06070E5D019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94CB82E-929D-483D-A02E-B089FC8C9A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94CB82E-929D-483D-A02E-B089FC8C9A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94CB82E-929D-483D-A02E-B089FC8C9A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94CB82E-929D-483D-A02E-B089FC8C9A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A106DCD8-E82A-4408-B8FC-B988457B6210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A106DCD8-E82A-4408-B8FC-B988457B6210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A106DCD8-E82A-4408-B8FC-B988457B6210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A106DCD8-E82A-4408-B8FC-B988457B6210}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B12ED5D-2916-4641-8333-A06070E5D019} = {2C7663AA-4DCD-420A-8675-C394ADBE24BF}
+		{C94CB82E-929D-483D-A02E-B089FC8C9A01} = {7ECD0FE3-A273-4DEE-91FC-A82F9150FAB9}
+		{A106DCD8-E82A-4408-B8FC-B988457B6210} = {FB804EAC-B1B0-4FCB-B668-4E7F3EE96CB9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C394227-1309-4DE9-9D37-2DAD5B474449}
+	EndGlobalSection
+EndGlobal

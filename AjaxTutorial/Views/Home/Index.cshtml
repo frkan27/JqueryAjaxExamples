@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model AjaxTutorial.Models.UserModel
+
+<div class="row">
+    <div class="col-md-8 col-lg-offset-4">
+        <h2>Add User</h2>
+        <br />
+        <span>User Name</span>@Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })<br />
+        <span>Email</span>@Html.TextBoxFor(x => x.Email, new { @class = "form-control" })<br />
+        <span>Password</span>@Html.TextBoxFor(x => x.Password, new { @class = "form-control" })<br />
+        <p><a class="btn btn-info" onclick="SaveUser()">Save</a></p>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-lg-offset-3">
+        <h2>New User List</h2>
+        <table id="MyTable" class="table-striped">
+            <tr>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<style>
+    #MyTable tr th {
+        color:white;
+        width:300px;
+        height:40px;
+        text-decoration:solid;
+        background-color:yellow;
+        padding:10px;
+    }
+</style>
+<script>
+    function SaveUser() {
+        var userName = $("#UserName").val();
+        var email = $("#Email").val();
+        var password = $("#Password").val();
+
+        $.ajax({
+            type: "POST",
+            url: "/Home/AddUser",
+            data: JSON.stringify({ UserName: userName, Email: email, Password: password }),
+            contentType: "application/json",
+
+            success: function (result) {
+                $("#MyTable").append("<tr><td>" + result.UserName + "</td><td>" + result.Email + "</td><td>" + result.Password + "</td></tr>");
+
+                $("#UserName").val("");
+                $("#Email").val("");
+                $("#Password").val("");
+            }
+          
+        })
+
+    } 
+</script>

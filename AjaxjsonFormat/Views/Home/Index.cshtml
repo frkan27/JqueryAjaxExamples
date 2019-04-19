@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $.getJSON("https://services.odata.org/v3/odata/odata.svc/Products?$format=json", function (veri) {
+                $.each(veri.value, function (key, item) {
+                    $("#ull").append("<li>" + item.Name +"--"+item.Description+ "</li>")
+                })
+            })
+
+        })
+    })
+
+
+
+
+</script>
+<button id="btn1">Json oku</button>
+<ul id="ull"></ul>
