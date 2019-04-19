@@ -40,15 +40,22 @@
 </style>
 <script>
     function SaveUser() {
-        var userName = $("#UserName").val();
-        var email = $("#Email").val();
-        var password = $("#Password").val();
+        //var userName = $("#UserName").val();
+        //var email = $("#Email").val();
+        //var password = $("#Password").val();
+        var data= {
+            UserName: $("#UserName").val(),
+            Email: $("#Email").val(),
+            Password: $("#Password").val(),
+        }
 
         $.ajax({
             type: "POST",
             url: "/Home/AddUser",
-            data: JSON.stringify({ UserName: userName, Email: email, Password: password }),
-            contentType: "application/json",
+            dataType: "json",
+            data:data,
+            //data: JSON.stringify({ UserName: userName, Email: email, Password: password }),
+            //contentType: "application/json",
 
             success: function (result) {
                 $("#MyTable").append("<tr><td>" + result.UserName + "</td><td>" + result.Email + "</td><td>" + result.Password + "</td></tr>");
